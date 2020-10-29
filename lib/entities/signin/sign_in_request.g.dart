@@ -21,5 +21,6 @@ Map<String, dynamic> _$SignInRequestToJson(SignInRequest instance) =>
       'Password': instance.Password,
       'Source': instance.Source,
       'DeviceId': instance.DeviceId,
+      'deviceIdVCM': instance.deviceIdVCM,
       'OperatingSystem': instance.OperatingSystem,
     };

@@ -14,6 +14,7 @@ class MainBloc extends BaseBloc {
 
   void notificationConfig() {
     _notificationService.config();
+    _notificationService.configVcm();
   }
 
 

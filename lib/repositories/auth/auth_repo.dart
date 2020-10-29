@@ -1,9 +1,10 @@
 import 'package:orim/model/auth/auth.dart';
+import 'package:orim/model/device_vcm/deviceId_vcm_request.dart';
 import 'package:orim/model/info_after_login.dart';
 import 'package:orim/model/infologin/info_login.dart';
 
 abstract class AuthRepo {
-  Future<InfoAfterLogin> login({ String username, String password, String deviceId });
+  Future<InfoAfterLogin> login({ String username, String password, String deviceId , DeviceVcmRequest deviceIdVcm});
   Future<bool> logout();
 
   Future<AuthModel> getAuth();

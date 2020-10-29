@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="Flutter Plugins" type="FlutterPluginsLibraryType">
+    <CLASSES>
+      <root url="file://G:/dowload/flutter_windows_1.17.3-stable/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-1.6.11" />
+      <root url="file://G:/dowload/flutter_windows_1.17.3-stable/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-1.0.8" />
+      <root url="file://G:/dowload/flutter_windows_1.17.3-stable/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.5.10" />
+      <root url="file://G:/dowload/flutter_windows_1.17.3-stable/flutter/.pub-cache/hosted/pub.dartlang.org/multi_image_picker-4.6.7" />
+      <root url="file://G:/dowload/flutter_windows_1.17.3-stable/flutter/.pub-cache/hosted/pub.dartlang.org/video_player_web-0.1.3+2" />
+      <root url="file://G:/dowload/flutter_windows_1.17.3-stable/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_secure_storage-3.3.3" />
+      <root url="file://G:/dowload/flutter_windows_1.17.3-stable/flutter/.pub-cache/hosted/pub.dartlang.org/webview_flutter-0.3.22+1" />
+      <root url="file://G:/dowload/flutter_windows_1.17.3-stable/flutter/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter-0.5.30" />
+      <root url="file://G:/dowload/flutter_windows_1.17.3-stable/flutter/.pub-cache/hosted/pub.dartlang.org/video_player-0.10.11+2" />
+      <root url="file://G:/dowload/flutter_windows_1.17.3-stable/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_apns-1.1.0" />
+      <root url="file://G:/dowload/flutter_windows_1.17.3-stable/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.6.7+3" />
+      <root url="file://G:/dowload/flutter_windows_1.17.3-stable/flutter/.pub-cache/hosted/pub.dartlang.org/device_info-0.4.2+4" />
+      <root url="file://G:/dowload/flutter_windows_1.17.3-stable/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-0.0.4+3" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

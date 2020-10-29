@@ -146,6 +146,7 @@ class _MyHomePageState extends BaseState<HomeBloc, MyHomePage>
     //this.bloc.checkUpdateApp();
     bloc.initListener();
     bloc.listenNotification();
+    bloc.listenNotificationVCM();
     bloc.getInfoUser();
   }
 

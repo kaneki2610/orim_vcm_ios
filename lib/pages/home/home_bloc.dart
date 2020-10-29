@@ -81,8 +81,6 @@ class HomeBloc extends BaseBloc {
     this._logoutSubscription?.cancel();
   }
 
-
-
   void gotoIntro() {
     NavigatorService.gotoIntro(context);
   }
@@ -126,6 +124,7 @@ class HomeBloc extends BaseBloc {
     this.authViewModel.removeAuth();
     _notificationViewModel.removeAllNotification();
   }
+
   Future<void> reloadDataLogOut() async {
     bool res;
     res = await authViewModel.logout();
@@ -159,7 +158,6 @@ class HomeBloc extends BaseBloc {
         NavigatorService.popToRoot(context);
         this.changeTab(TabIndexEnum.Home);
       });
-
     }
     this._isShowPopupLogout = true;
   }
@@ -173,8 +171,9 @@ class HomeBloc extends BaseBloc {
   }
 
   listenNotification() {
-    print('listenNotification');
-    //_notificationService.requestNotificationPermissions();
+    Future.delayed(const Duration(milliseconds: 1000), () {
+      _notificationService.requestNotificationPermissions();
+    });
     _notificationService.listenNotification(
         onNotification: (Model.Notification notification) async {
       if (notification != null) {
@@ -186,6 +185,23 @@ class HomeBloc extends BaseBloc {
           _view.showNotification(notification: notification);
         }
         _notificationService.removeNotification();
+      }
+    });
+  }
+
+  void listenNotificationVCM() {
+    _notificationService.listenNotificationVCM(
+        onNotification: (Model.Notification notification) async {
+      if (notification != null) {
+        this._notificationViewModel.saveNotification(notification);
+        AuthModel auth = await authViewModel.getAuth();
+        if (auth != null ||
+            EnumActionNotification.NEWS == notification.action ||
+            EnumActionNotification.ADMINMONITOR == notification.action) {
+          print("-----onNotification vcm------${notification.url}");
+          _view.showNotification(notification: notification);
+        }
+        _notificationService.removeNotificationVCM();
       }
     });
   }

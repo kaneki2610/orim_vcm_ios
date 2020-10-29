@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:orim/base/viewmodel.dart';
+import 'package:orim/config/app_config.dart';
 import 'package:orim/model/auth/auth.dart';
+import 'package:orim/model/device_vcm/deviceId_vcm_request.dart';
 import 'package:orim/model/info_after_login.dart';
 import 'package:orim/model/infologin/info_login.dart';
 import 'package:orim/repositories/auth/auth_repo.dart';
@@ -14,10 +16,13 @@ class AuthViewModel extends BaseViewModel<AuthModel> {
   NotificationService notificationService = NotificationService.getInstance();
 
   Future<InfoAfterLogin> login({String username, String password}) async {
+    String tokenVcm = await notificationService.tokenVcm;
+    DeviceVcmRequest deviceVcmRequest = DeviceVcmRequest(deviceId: tokenVcm, plushKey: AppConfig.apiKeyVcm);
     final InfoAfterLogin response = await authRepo.login(
         username: username,
         password: password,
-        deviceId: await notificationService.token);
+        deviceId: await notificationService.token,
+        deviceIdVcm: deviceVcmRequest);
     if (response != null) {
       data = response.authModel;
 //      if (saveCache) {

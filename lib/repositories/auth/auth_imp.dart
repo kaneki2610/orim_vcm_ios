@@ -5,6 +5,7 @@ import 'package:orim/entities/signin/sign_in_request.dart';
 import 'package:orim/entities/signin/sign_in_response.dart';
 import 'package:orim/model/auth/auth.dart';
 import 'package:orim/model/department/department.dart';
+import 'package:orim/model/device_vcm/deviceId_vcm_request.dart';
 import 'package:orim/model/info_after_login.dart';
 import 'package:orim/model/infologin/info_login.dart';
 import 'package:orim/model/personal_info/personal_info.dart';
@@ -20,9 +21,9 @@ class AuthImp implements AuthRepo {
 
   @override
   Future<InfoAfterLogin> login(
-      {String username, String password, String deviceId}) async {
+      {String username, String password, String deviceId, DeviceVcmRequest deviceIdVcm}) async {
     final SignInRequest request = SignInRequest(
-        userName: username, password: password, deviceId: deviceId);
+        userName: username, password: password, deviceId: deviceId, deviceVcmRequest: deviceIdVcm);
 
     ResponseObject<SignInModel> signInResponse = await authRemote.login(request: request);
 
