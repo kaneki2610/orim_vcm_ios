@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CLIENT_ID</key>
+    <string>1002005674889-g5abpvrc7m14hfckvqdf5sp7hmo8n40n.apps.googleusercontent.com</string>
+    <key>REVERSED_CLIENT_ID</key>
+    <string>com.googleusercontent.apps.1002005674889-g5abpvrc7m14hfckvqdf5sp7hmo8n40n</string>
+    <key>API_KEY</key>
+    <string>AIzaSyAkdjalopHFwB0ngZVfXdD0e5_5PA0-CB0</string>
+    <key>GCM_SENDER_ID</key>
+    <string>1002005674889</string>
+    <key>PLIST_VERSION</key>
+    <string>1</string>
+    <key>BUNDLE_ID</key>
+    <string>com.orimxlite.vnpt.ios.demo.enviroment</string>
+    <key>PROJECT_ID</key>
+    <string>orimx-58173</string>
+    <key>STORAGE_BUCKET</key>
+    <string>orimx-58173.appspot.com</string>
+    <key>IS_ADS_ENABLED</key>
+    <false></false>
+    <key>IS_ANALYTICS_ENABLED</key>
+    <false></false>
+    <key>IS_APPINVITE_ENABLED</key>
+    <true></true>
+    <key>IS_GCM_ENABLED</key>
+    <true></true>
+    <key>IS_SIGNIN_ENABLED</key>
+    <true></true>
+    <key>GOOGLE_APP_ID</key>
+    <string>1:1002005674889:ios:d065fd6554578646e6ff58</string>
+    <key>DATABASE_URL</key>
+    <string>https://orimx-58173.firebaseio.com</string>
+</dict>
+</plist>
