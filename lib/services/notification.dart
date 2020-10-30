@@ -65,6 +65,8 @@ class NotificationService {
             apiToken:
                 "Bearer ${AppConfig.apiKeyVcm}");
         this._vnptNotifications.subcribeVnptCloudMessage(['/topics/orim_vcm_ios']);
+        String a = await this.tokenVcm;
+        print("token fcm ------------ $a");
       }
     }
   }

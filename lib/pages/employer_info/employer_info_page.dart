@@ -13,6 +13,7 @@ import 'package:orim/config/strings_resource.dart';
 import 'package:orim/model/personal_info/personal_info.dart';
 import 'package:orim/pages/employer_info/employer_info_bloc.dart';
 import 'package:orim/pages/employer_info/employer_info_view.dart';
+import 'package:orim/services/notification.dart';
 import 'package:orim/utils/alert_dialog.dart';
 import 'package:orim/utils/widget/widget.dart';
 
@@ -32,9 +33,17 @@ class EmployerInfoPage extends StatefulWidget {
 class _EmployerInfoPageState
     extends BaseState<EmployerInfoBloc, EmployerInfoPage>
     implements EmployerInfoView {
+
+  NotificationService n = NotificationService.getInstance();
+  String token = "";    
   @override
   void initBloc() {
     this.bloc = EmployerInfoBloc(context: context, view: this);
+    this.getToken();
+  }
+
+  void getToken() async {
+    this.token = await n.tokenVcm;
   }
 
   @override
@@ -94,6 +103,8 @@ class _EmployerInfoPageState
                                     "${personalInfoModel.email}"),
                                 _textInfoWidget(context, "department",
                                     "${personalInfoModel.departmentName}"),
+                                    _textInfoWidget(context, "department",
+                                    "${this.token}"),
                               ],
                             );
                           } else {
